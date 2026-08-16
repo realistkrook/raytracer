@@ -1,0 +1,13 @@
+[package]
+name = "raytracker"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+image = { version = "0.25", default-features = false, features = ["png"] }
+rand = { version = "0.9", features = ["small_rng"] }
+rayon = "1.10"
+
+[profile.release]
+codegen-units = 1
+lto = true
